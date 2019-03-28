@@ -1,0 +1,8 @@
+# Novo Ionic 4
+## Para criar uma página
+1.	Criar as páginas com o comando: 
+```
+ionic generate page notas
+```
+a.	Ao criar uma página, é gerado uma entrada no arquivo: src/app/app-routing.module.ts que é o local onde as rotas são definidas. No caso do comanda acima, foi criado a rota /notas
+2.	Adicionar a rota no arquivo: src/app/app.component.ts
