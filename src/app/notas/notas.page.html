@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Notas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="1b" checked>
+      <ion-label>1˚</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2b">
+      <ion-label>2˚</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3b">
+      <ion-label>3˚</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="4b">
+      <ion-label>4˚</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-card *ngIf="!notas?.length >0">
+    <ion-card-content>
+      Você não possui notas registradas.
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-list *ngFor="let nota of notas">
+    <ion-list-header>
+      <ion-label>{{nota.disciplina}}</ion-label>
+    </ion-list-header>
+    <!-- <ion-item *ngFor="let nt of nota.notas"></ion-item> -->
+
+
+  <ion-item>
+    <ion-label>N1</ion-label>
+    <ion-note slot="end">{{nota.notas.n1}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>N2</ion-label>
+    <ion-note slot="end">{{nota.notas.n2}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>N3</ion-label>
+    <ion-note slot="end">{{nota.notas.n3}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Prova</ion-label>
+    <ion-note slot="end">{{nota.notas.prova}}</ion-note>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Média</ion-label>
+    <ion-note slot="end">{{nota.notas.media}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Recuperação</ion-label>
+    <ion-note slot="end">{{nota.notas.recuperacao}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Recuperação Final</ion-label>
+    <ion-note slot="end">{{nota.notas.recfinal}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Média 1˚ Bimestre</ion-label>
+    <ion-note slot="end">{{nota.notas.media_b1}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Média 2˚ Bimestre</ion-label>
+    <ion-note slot="end">{{nota.notas.media_b2}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Média 1˚ Semestre</ion-label>
+    <ion-note slot="end">{{nota.notas.media_s1}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Média 3˚ Bimestre</ion-label>
+    <ion-note slot="end">{{nota.notas.media_b3}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Média 4˚ Bimestre</ion-label>
+    <ion-note slot="end">{{nota.notas.media_b4}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Média 2˚ Semestre</ion-label>
+    <ion-note slot="end">{{nota.notas.media_s2}}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Média Final</ion-label>
+    <ion-note slot="end">{{nota.notas.media_final}}</ion-note>
+  </ion-item>
+</ion-list>
+
+
+</ion-content>
