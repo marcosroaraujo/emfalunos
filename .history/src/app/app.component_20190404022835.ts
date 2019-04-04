@@ -45,7 +45,7 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      // Checa as permissões
+      // to check if we have permission
       this.push.hasPermission()
         .then((res: any) => {
 
@@ -57,14 +57,12 @@ export class AppComponent {
 
         });
 
-      // Cria o canal 'all' para enviar mensagens para todos os usuários do APP.
-      // Pode ser criado vários canais para segmentar as mensagens
-      // Pegar os dados do período do aluno e criar um canal
+      // Create a channel (Android O and above). You'll need to provide the id, description and importance properties.
       this.push.createChannel({
-        id: 'all',
-        description: 'Todos',
-        // The importance property goes from 1 = Lowest, 2 = Low, 3 = Normal, 4 = High and 5 = Highest.
-        importance: 3
+      id: 'all',
+      description: 'Todos',
+      // The importance property goes from 1 = Lowest, 2 = Low, 3 = Normal, 4 = High and 5 = Highest.
+      importance: 3
       }).then(() => console.log('Channel created'));
 
       const options: PushOptions = {
@@ -72,7 +70,7 @@ export class AppComponent {
         ios: {
             alert: 'true',
             badge: true,
-            sound: 'false'
+            sound: 'true'
         },
         windows: {},
         browser: {
@@ -99,8 +97,7 @@ export class AppComponent {
       duration: 5000,
       position: 'top',
       showCloseButton: true,
-      closeButtonText: 'Fechar',
-      color: 'dark'
+      closeButtonText: 'Fechar'
     });
     toast.present();
   }

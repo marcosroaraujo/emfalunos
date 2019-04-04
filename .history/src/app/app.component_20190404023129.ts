@@ -99,8 +99,7 @@ export class AppComponent {
       duration: 5000,
       position: 'top',
       showCloseButton: true,
-      closeButtonText: 'Fechar',
-      color: 'dark'
+      closeButtonText: 'Fechar'
     });
     toast.present();
   }

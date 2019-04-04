@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "734375991871",
+    "firebase_url": "https://sigma-ba028.firebaseio.com",
+    "project_id": "sigma-ba028",
+    "storage_bucket": "sigma-ba028.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734375991871:android:f8e16105ad35d6f9",
+        "android_client_info": {
+          "package_name": "br.com.escolamaisfacil.emfalunos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVpBIaOOFvmx8vEDj6NgiqIhhhoiEmOpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734375991871-ileao4p70obv4tpj8o5f1dv29gdob2p8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "734375991871-8jmd7fff8d67rp640rd822sd2tdkt11k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.escolamaisfacil.emfalunos"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
